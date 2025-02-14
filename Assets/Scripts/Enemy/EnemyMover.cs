@@ -8,32 +8,31 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] private Transform _pointB;
     [SerializeField] private float _speed;
 
+    private bool _changeDirection;
+    
     private void FixedUpdate()
     {
-        var distanceToPointA = Vector2.Distance(transform.position, _pointA.position);
-        var distanceToPointB = Vector2.Distance(transform.position, _pointB.position);
-        
-        if (distanceToPointA <= distanceToPointB)
+        if (_changeDirection)
         {
-            if (distanceToPointA <= 0.5f)
-            {
-                _rigidbody2D.linearVelocity = Vector2.right * _speed;
-            }
-            else
-            {
-                _rigidbody2D.linearVelocity = Vector2.left * _speed;
-            }
+            _rigidbody2D.linearVelocity = Vector2.left * _speed;   
+            print("Go Left!");
         }
         else
         {
-            if (distanceToPointB <= 0.5f)
-            {
-                _rigidbody2D.linearVelocity = Vector2.left * _speed;
-            }
-            else
-            {
-                _rigidbody2D.linearVelocity = Vector2.right * _speed;
-            }
+            _rigidbody2D.linearVelocity = Vector2.right * _speed;
+            print("Go Right!");
+        }
+        
+        var distanceToPointA = Vector2.Distance(transform.position, _pointA.position);
+        var distanceToPointB = Vector2.Distance(transform.position, _pointB.position);
+        
+        if (distanceToPointA <= 1.1f)
+        {
+            _changeDirection = false;
+        }
+        if (distanceToPointB <= 1.1f)
+        {
+            _changeDirection = true;
         }
     }
 }
