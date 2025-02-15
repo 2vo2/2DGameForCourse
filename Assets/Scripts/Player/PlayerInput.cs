@@ -6,6 +6,7 @@ public class PlayerInput : MonoBehaviour
     public bool LeftInput { get; private set; }
     public bool RightInput { get; private set; }
     public bool SpaceInput { get; private set; }
+    public bool LeftMouseButtonInput { get; private set; }
 
     private void FixedUpdate()
     {
@@ -17,5 +18,6 @@ public class PlayerInput : MonoBehaviour
         RightInput = Input.GetKeyDown(KeyCode.D);
         LeftInput = Input.GetKeyDown(KeyCode.A);
         SpaceInput = Input.GetKeyDown(KeyCode.Space);
+        LeftMouseButtonInput = Input.GetMouseButtonDown(0);
     }
 }

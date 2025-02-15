@@ -9,6 +9,7 @@ public class PlayerMover : MonoBehaviour
     [SerializeField] private float _jumpForce;
 
     public bool IsGrounded { get; private set; }
+    public bool IsMoving { get; private set; }
 
     private void Update()
     {
@@ -43,9 +44,16 @@ public class PlayerMover : MonoBehaviour
 
     private void Move()
     {
+        Moving();
+        
         var movementVector = new Vector2(_playerInput.HorizontalInput * _moveSpeed, _rigidbody2D.linearVelocity.y);
 
         _rigidbody2D.linearVelocity = movementVector;
+    }
+
+    private void Moving()
+    {
+        IsMoving = _playerInput.HorizontalInput != 0f;
     }
 
     private void Jump()
