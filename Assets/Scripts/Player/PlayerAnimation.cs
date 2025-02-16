@@ -11,7 +11,6 @@ public class PlayerAnimation : MonoBehaviour
     private readonly int _idleHashAnimation = Animator.StringToHash("PlayerIdle");
     private readonly int _runHashAnimation = Animator.StringToHash("PlayerRun");
     private readonly int _jumpHashAnimation = Animator.StringToHash("PlayerJump");
-    private readonly int _fadeHashAnimation = Animator.StringToHash("PlayerFade");
     private readonly int _shootHashAnimation = Animator.StringToHash("PlayerShoot");
     private readonly int _runShootHashAnimation = Animator.StringToHash("PlayerRunShoot");
 
@@ -24,7 +23,15 @@ public class PlayerAnimation : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.TryGetComponent(out Enemy enemy))
-            _playerAnimator.CrossFade(_fadeHashAnimation, 0f);
+        {
+            _playerAnimator.SetLayerWeight(1, 1f);
+            Invoke(nameof(ResetFade), 1f);
+        }
+    }
+
+    private void ResetFade()
+    {
+        _playerAnimator.SetLayerWeight(1, 0f);
     }
 
     private void HandleAnimations()
