@@ -18,6 +18,6 @@ public class PlayerInput : MonoBehaviour
         RightInput = Input.GetKeyDown(KeyCode.D);
         LeftInput = Input.GetKeyDown(KeyCode.A);
         SpaceInput = Input.GetKeyDown(KeyCode.Space);
-        LeftMouseButtonInput = Input.GetMouseButtonDown(0);
+        LeftMouseButtonInput = Input.GetMouseButton(0);
     }
 }

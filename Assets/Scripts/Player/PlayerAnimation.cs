@@ -48,7 +48,7 @@ public class PlayerAnimation : MonoBehaviour
         {
             _playerAnimator.CrossFade(_runHashAnimation, 0f);
         }
-        else if (_playerShoot.IsShooting && !_playerMover.IsMoving)
+        else if (_playerShoot.IsShooting)
         {
             _playerAnimator.CrossFade(_shootHashAnimation, 0f);
         }
