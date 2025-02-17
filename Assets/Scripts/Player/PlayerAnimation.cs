@@ -5,7 +5,6 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMover _playerMover;
     [SerializeField] private PlayerShoot _playerShoot;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
     [SerializeField] private Animator _playerAnimator;
 
     private readonly int _idleHashAnimation = Animator.StringToHash("PlayerIdle");
@@ -13,7 +12,7 @@ public class PlayerAnimation : MonoBehaviour
     private readonly int _jumpHashAnimation = Animator.StringToHash("PlayerJump");
     private readonly int _shootHashAnimation = Animator.StringToHash("PlayerShoot");
     private readonly int _runShootHashAnimation = Animator.StringToHash("PlayerRunShoot");
-
+    
     private void Update()
     {
         FlipCharacter();
@@ -62,11 +61,18 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_playerInput.RightInput)
         {
-            _spriteRenderer.flipX = false;
+            ChangePlayerScale(1f);
         }
         else if (_playerInput.LeftInput)
         {
-            _spriteRenderer.flipX = true;
+            ChangePlayerScale(-1f);
         }
+    }
+
+    private void ChangePlayerScale(float scaleX)
+    {
+        var playerScale = transform.localScale;
+        playerScale.x = scaleX;
+        transform.localScale = playerScale;
     }
 }
