@@ -362,6 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7298c239fa999914baf3e171a9ecc244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerAnimation: {fileID: 87447618}
+  _health: 5
 --- !u!247 &87447617
 ConstantForce2D:
   m_ObjectHideFlags: 0
@@ -1864,7 +1866,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2433460399052172928, guid: e2d18cbf8fd177c40a357dd9bdf1fd9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7104740755850204586, guid: e2d18cbf8fd177c40a357dd9bdf1fd9c, type: 3}
       propertyPath: m_LocalPosition.x
