@@ -23,7 +23,7 @@ public class PlayerMover : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.TryGetComponent(out PlatformEffector2D platformEffector2D))
+        if (other.gameObject.TryGetComponent(out Platform platform))
         {
             foreach (var contact in other.contacts)
             {

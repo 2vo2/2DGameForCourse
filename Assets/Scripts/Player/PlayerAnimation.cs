@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerAnimation : MonoBehaviour
+public class PlayerAnimation : MonoBehaviour, IFadeable
 {
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private PlayerMover _playerMover;
@@ -23,16 +23,11 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent(out Enemy enemy))
         {
-            _playerAnimator.SetLayerWeight(1, 1f);
+            SetFade();
             Invoke(nameof(ResetFade), 1f);
         }
     }
-
-    private void ResetFade()
-    {
-        _playerAnimator.SetLayerWeight(1, 0f);
-    }
-
+    
     private void HandleAnimations()
     {
         if (!_playerMover.IsGrounded)
@@ -74,5 +69,16 @@ public class PlayerAnimation : MonoBehaviour
         var playerScale = transform.localScale;
         playerScale.x = scaleX;
         transform.localScale = playerScale;
+    }
+
+    public void SetFade()
+    {
+        _playerAnimator.SetLayerWeight(1, 1f);
+        Invoke(nameof(ResetFade), 1f);
+    }
+
+    public void ResetFade()
+    {
+        _playerAnimator.SetLayerWeight(1, 0f);
     }
 }

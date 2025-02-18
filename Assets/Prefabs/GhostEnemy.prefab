@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8202c0304cbcb754781cf09774f1bf42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAnimation: {fileID: 3558639836318371452}
 --- !u!114 &271306692101354346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aa8bb820b243bf8da141715241f01c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAnimator: {fileID: 4031413790658867038}
   _enemyMover: {fileID: 271306692101354346}
   _enemySpriteRenderer: {fileID: 2467322088117872415}
 --- !u!1 &5964056510239037785

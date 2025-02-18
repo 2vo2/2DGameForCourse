@@ -418,7 +418,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 7176038933845202424, guid: abd1f5214602b8840b19548c08fe4508, type: 3}
   _shootPoint: {fileID: 804424372}
   _shootSpeed: 700
-  _shootDelay: 0.7
+  _shootDelay: 0.8
 --- !u!1 &228684511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2053124737751564305, guid: c61b2cc678c829b4b93dda5cf5542762, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3834934550090276249, guid: c61b2cc678c829b4b93dda5cf5542762, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1245,7 +1245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3834934550090276249, guid: c61b2cc678c829b4b93dda5cf5542762, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3834934550090276249, guid: c61b2cc678c829b4b93dda5cf5542762, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8963517675121981184, guid: c61b2cc678c829b4b93dda5cf5542762, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1313,7 +1313,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &938490818
 Transform:
@@ -2155,12 +2155,13 @@ GameObject:
   - component: {fileID: 1768470814}
   - component: {fileID: 1768470813}
   - component: {fileID: 1768470812}
+  - component: {fileID: 1768470816}
   m_Layer: 0
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1768470811
 Transform:
@@ -2526,6 +2527,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1768470816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768470810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9f01e70a825dd4b8b3ca3d7b2b3165, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _strayBulletPrefab: {fileID: 3902552679056002996, guid: 6b6fe38bac80a4342a63e42f228299f9, type: 3}
 --- !u!1 &1866091930
 GameObject:
   m_ObjectHideFlags: 0

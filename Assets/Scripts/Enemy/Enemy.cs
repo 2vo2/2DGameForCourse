@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IHittable
 {
+    [SerializeField] private EnemyAnimation _enemyAnimation;
+    
     public void Hit()
     {
-        throw new System.NotImplementedException();
+        _enemyAnimation.SetFade();
+    }
+
+    public void Hit(Vector2 hitPoint)
+    {
     }
 }

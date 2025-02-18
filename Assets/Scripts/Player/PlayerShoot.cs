@@ -23,8 +23,8 @@ public class PlayerShoot : MonoBehaviour
             
             if (_delayTimer >= _shootDelay)
             {
-                Shoot();
                 _delayTimer = 0f;
+                Shoot();
             }
         }
         else
