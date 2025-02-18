@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyAnimation: {fileID: 3190854782807878147}
+  _health: 3
 --- !u!114 &9109664899830701720
 MonoBehaviour:
   m_ObjectHideFlags: 0
