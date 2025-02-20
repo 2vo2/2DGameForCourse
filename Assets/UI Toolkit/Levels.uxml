@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="InfoVisualElement" style="flex-grow: 1; justify-content: space-between; flex-direction: row;">
+        <engine:Label text="Health: 10" name="HealthLabel" style="font-size: 32px; -unity-font-definition: url(&quot;project://database/Assets/Sprites/CraftPixel/10%20Font/CyberpunkCraftpixPixel.otf?fileID=12800000&amp;guid=cceb1a81ab254c648853129c52cb0744&amp;type=3#CyberpunkCraftpixPixel&quot;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(191, 99, 130); margin-top: 5px; margin-left: 10px;" />
+        <engine:Label text="Coins: 0" name="CoinsLabel" style="font-size: 32px; -unity-font-definition: url(&quot;project://database/Assets/Sprites/CraftPixel/10%20Font/CyberpunkCraftpixPixel.otf?fileID=12800000&amp;guid=cceb1a81ab254c648853129c52cb0744&amp;type=3#CyberpunkCraftpixPixel&quot;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(191, 99, 130); margin-top: 5px; margin-right: 10px;" />
+    </engine:VisualElement>
+</engine:UXML>
